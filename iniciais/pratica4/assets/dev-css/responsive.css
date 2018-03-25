@@ -1,0 +1,18 @@
+@media screen and (max-width: 800px){
+	.flex-row{
+		flex-direction: column;
+		height: 100vh;
+
+		.flex-item{
+			height: auto;
+			width: 100%;
+			background-position: 100% 0;
+
+			&:not(:last-of-type){
+				border-right: none;
+
+				border-bottom: 2px solid white;
+			}
+		}
+	}
+}

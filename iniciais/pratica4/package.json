@@ -1,7 +1,7 @@
 {
-  "name": "pratica1",
+  "name": "pratica4",
   "version": "1.0.0",
-  "description": "Projeto 1 oficina de javascript, topico: classList e seletores",
+  "description": "Projeto 4 oficina de javascript, topico: maior forEach loop",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
