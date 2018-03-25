@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Event Bubbling</title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	
+	<main>
+		<button type="button" id="openModal">Modal da delícia</button>
+	</main>
+
+	<div class="modal" id="modal">
+		<form action="#">
+			<h3>Cadastre-se para relaxar</h3>
+			<img src="assets/img/jailson.jpg" alt="Jailson">
+			<input type="text" name="nome" placeholder="Nome" required>
+			<input type="email" name="email" placeholder="E-mail" required> 
+			<button type="submit">Cadastrar</button>
+		</form>
+	</div>
+
+	<script>
+		var btn = document.getElementById("openModal");
+		var modal = document.getElementById("modal");
+		var form = document.querySelector(".modal form");
+
+		btn.addEventListener("click", function(){
+		  modal.classList.add("active");
+		});
+
+		modal.addEventListener("click", function(){
+		  this.classList.remove("active");
+		});
+
+		
+	</script>
+</body>
+</html>
