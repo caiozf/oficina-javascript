@@ -1,0 +1,1 @@
+@media screen and (max-width:800px){.flex-row{-ms-flex-direction:column;flex-direction:column;height:100vh}.flex-row .flex-item{height:auto;width:100%;background-position:100% 0}.flex-row .flex-item:not(:last-of-type){border-right:none;border-bottom:2px solid #fff}}

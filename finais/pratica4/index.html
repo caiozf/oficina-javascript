@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Prática 4</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+	<main>
+		<div class="flex-row">
+			<div class="flex-item item">
+				<h3 class="title">Doomguy</h3>
+				<a href="https://doom.com/en-us/" target="_blank" class="link">Website</a>
+			</div>
+
+			<div class="flex-item item">
+				<h3 class="title">Revenant</h3>
+				<a href="https://doom.com/en-us/" target="_blank" class="link">Website</a>
+			</div>
+
+			<div class="flex-item item">
+				<h3 class="title">Cyber Demon</h3>
+				<a href="https://doom.com/en-us/" target="_blank" class="link">Website</a>
+			</div>
+
+			<div class="flex-item item">
+				<h3 class="title">Pink Demon</h3>
+				<a href="https://doom.com/en-us/" target="_blank" class="link">Website</a>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		var items = [].slice.call(document.querySelectorAll(".item"));
+
+		items.forEach(function(item){
+
+			item.addEventListener("click", function(){
+				if(item.classList.contains("active")){
+					item.classList.remove("active");
+				}else{
+					var itemAtivo = document.querySelector(".item.active");
+					if(itemAtivo){
+						itemAtivo.classList.remove("active");
+						item.classList.add("active");						
+					}else{
+						item.classList.add("active");
+					}
+
+				}
+			});
+		})
+	</script>
+</body>
+</html>

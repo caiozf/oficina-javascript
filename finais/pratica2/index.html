@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora IMC</title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<main>
+		<div class="result">
+			<h1 id="resultado-calculo">0</h1>
+			<h2 id="resultado"></h2>
+		</div>
+
+		<form>
+			<input type="number" id="peso" placeholder="peso" required>
+			<input type="number" id="altura" placeholder="altura" required>
+			<button id="calcular">Calcular</button>
+		</form>
+	</main>
+
+	<script>
+		var peso = document.getElementById("peso"); //input peso
+		var altura = document.getElementById("altura"); //input altura
+		var botao = document.getElementById("calcular"); //botaozinho
+		var resultado = document.getElementById("resultado-calculo"); //h1 com o ZERO
+		var resultadoTitulo = document.getElementById("resultado");
+		//Calma ae
+
+		botao.addEventListener("click", function(event){ //escuta acao de clique no botao
+
+			event.preventDefault(); //previne padrao
+
+			var pesoVal = peso.value; // captura valor digitado
+			var alturaVal = altura.value; // captura valor digitado
+
+			var imc = pesoVal / (alturaVal * alturaVal); // calculo
+
+			var resultFinal = imc.toFixed(2); //arredonda 2 casas
+
+			resultado.innerHTML = resultFinal; //joga o resultado final
+
+			if(resultFinal < 15){
+				var texto = "Voce esta muito magro";
+				resultadoTitulo.innerHTML = texto;
+			}else if(resultFinal > 24){
+				var texto = "Voce está acima do peso";
+				resultadoTitulo.innerHTML = texto;
+			}else{
+				var texto = "Peso ideal";
+				resultadoTitulo.innerHTML = texto;
+			}
+		});
+	</script>
+</body>
+</html>
