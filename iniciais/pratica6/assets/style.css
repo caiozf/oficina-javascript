@@ -1,0 +1,1 @@
+*{box-sizing:border-box}@keyframes fade{from{opacity:0}to{opacity:1}}body,html{margin:0;padding:0}img{max-width:100%}slider{width:100%}main{padding:2em}.imagem{display:none;margin:0}.imagem.active{display:block;text-align:center;animation:fade .4s}

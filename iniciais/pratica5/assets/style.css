@@ -1,0 +1,43 @@
+
+*{
+	box-sizing: border-box;
+}
+
+html,body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+main{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sorteador{
+	padding: 2em;
+	text-align: center;
+	box-shadow: 0 1px 20px rgba(0,0,0,0.25);
+	margin-bottom: 2em;
+	transition: 200ms ease all;
+}
+
+.sorteador, .button{
+	display: block;
+	min-width: 250px;
+	max-width: 300px;
+}
+
+.button{
+	padding: 0.5rem 2em;
+	font-size: 1.5em;
+	cursor: pointer;
+	outline: none;
+}
+
+
+
